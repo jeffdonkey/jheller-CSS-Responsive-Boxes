@@ -39,7 +39,7 @@ body {
   margin: 1%;
 }
 
-/* @media rules to help with mobile screens */
+/* @media rules to switch from cell phone screens to larger screens */
 @media (min-width: 600px) {
   .container {
     flex-direction: row;
