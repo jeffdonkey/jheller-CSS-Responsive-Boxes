@@ -1,3 +1,60 @@
 body {
   background: blanchedalmond;
+  margin: 0;
+  font-family: Impact;
+  font-size: larger;
+  text-align: center;
+
+}
+
+* {
+  border: 1px solid teal;
+}
+
+
+
+/* setting overall rules for container */
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+}
+
+/* style elements for each box go here */
+/* "vh" units are a % of viewport height */
+/* "vw" units are a % of viewport width */
+.a {
+  min-height: 10vh;
+  margin: 1%;
+}
+
+.b {
+  min-height: 73vh;
+  margin: 1%;
+}
+
+.c {
+  min-height: 10vh;
+  margin: 1%;
+}
+
+/* @media rules to help with mobile screens */
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .a {
+    min-height: 20vh;
+    min-width: 97vw;
+  }
+.b {
+  min-height: 70vh;
+  min-width: 75vw;
+}
+.c {
+  min-height: 70vh;
+  min-width: 19vw;
+}
 }
