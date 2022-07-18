@@ -63,12 +63,78 @@ body {
 }
 
 
-/* @media rules to go from desktop to mobile screens */
+/* @media rules to go mobile to desktop */
 @media (min-width: 600px) {
   .container {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
+    min-width: 100vw;
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content:left;
+  }
+
+  /*tried putting c,d,e in their own div .smallBoxes
+    trying to get small boxes to align under b
+  .smallBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100vw;
+    min-height: 100vh;
+    flex-direction: row;
+    justify-content left;
+  }
+
+  */
+
+
+  .container :nth-child(1) {order: 1;}
+  .container :nth-child(2) {order: 2;}
+  .container :nth-child(3) {order: 4;}
+  .container :nth-child(4) {order: 5;}
+  .container :nth-child(5) {order: 6;}
+  .container :nth-child(6) {order: 3;}
+  
+  
+
+
+  .a {
+    min-width: 97vw;
+    min-height: 30vh;
+    margin: 1%;
+  }
+
+  .b {
+    min-width: 65vw;
+    min-height: 30vh;
+    max-height: 30vh;
+    margin: 1%;
+  }
+
+  .f {
+    min-width: 30vw;
+    min-height: 60vh;
+    margin: 1%;
+  }
+
+  .c {
+    min-width: 20.25vw;
+    min-height: 30vh;
+    margin: 1%;
+  }
+
+  .d {
+    min-width: 20.25vw;
+    min-height: 30vh;
+    margin: 1%;
+  }
+
+  .e {
+    min-width: 20.25vw;
+    min-height: 30vh;
+    margin: 1%;
   }
 
   
+
 }
