@@ -1,3 +1,9 @@
+/* trying something different here using columns
+read it on w3 repsonsive */
+
+
+
+
 body {
   background: blanchedalmond;
   margin: 0;
@@ -9,52 +15,46 @@ body {
 
 * {
   border: 1px solid teal;
+  box-sizing: border-box;
 }
 
-
-
-/* setting overall rules for container */
-.container {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: row;
-
+/* clears flow issues? */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-/* style elements for each box go here */
-/* "vh" units are a % of viewport height */
-/* "vw" units are a % of viewport width */
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
 .a {
-  min-height: 10vh;
-  margin: 1%;
+  min-width: 100vw;
 }
 
-.b {
-  min-height: 73vh;
-  margin: 1%;
+.f {
+  min-width: 100vw;
 }
 
-.c {
-  min-height: 10vh;
-  margin: 1%;
+/* column widths for mobile screens */
+[class*="col-"] {
+  width: 100%;
 }
 
-/* @media rules to switch from cell phone screens to larger screens */
-@media (min-width: 600px) {
-  .container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .a {
-    min-height: 20vh;
-    min-width: 97vw;
-  }
-.b {
-  min-height: 70vh;
-  min-width: 75vw;
-}
-.c {
-  min-height: 70vh;
-  min-width: 19vw;
-}
+@media only screen and (min-width: 600px) {
+  /* column widths for larger than 600px */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
 }
